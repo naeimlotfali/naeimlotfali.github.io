@@ -96,7 +96,7 @@
   "skillBlocCubit": "Bloc/Cubit",
   "skillGetX": "GetX",
   "skillClean": "Clean",
-  "skillSupabase": "Hive",
+  "skillHive": "Hive",
   "skillSQLite": "SQLite",
   "skillGit": "Git",
   "skillCICD": "CI/CD",
