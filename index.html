@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naeim Lotfali — Flutter & Mobile Application Developer</title>
+    <meta name="description" content="Naeim Lotfali — Flutter & Mobile Application Developer with 5+ years of experience. Founder of Event Iran (eventiran.com), author of the outline_mobileproxy Flutter plugin, and builder of 10+ production apps for Android, iOS, Web & PWA.">
+    <meta name="author" content="Naeim Lotfali">
+    <meta name="theme-color" content="#0a0a0f">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Naeim Lotfali — Flutter & Mobile Application Developer">
+    <meta property="og:description" content="Flutter developer with 5+ years of experience. Founder of Event Iran and author of the outline_mobileproxy plugin on pub.dev.">
+    <meta property="og:image" content="assets/images/profile.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav id="navbar">
+        <div class="nav-logo">NL.</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-toggle" id="mobileToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Available for opportunities
+            </div>
+            <h1>Hi, I'm <span class="gradient-text">Naeim Lotfali</span></h1>
+            <p class="hero-subtitle">
+                Flutter & Mobile Application Developer with 5+ years of experience,
+                building scalable, high-performance apps for Android, iOS, Web & PWA —
+                from enterprise systems to live consumer products.
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    Get in Touch
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    View My Work
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </a>
+                <a href="assets/docs/Naeim-Lotfali-Resume.pdf" download class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= About ================= -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Crafting Digital Experiences<br>That Matter</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <img class="about-photo reveal" src="assets/images/profile.png" alt="Portrait of Naeim Lotfali">
+                <div class="about-text reveal">
+                    <p>
+                        I'm a Mobile Application Developer with 5+ years of experience designing and building
+                        cross-platform apps with Flutter and Kotlin — across logistics, healthcare, e-commerce,
+                        events, and enterprise systems.
+                    </p>
+                    <p>
+                        Experienced in Clean Architecture, real-time systems, offline-first applications, and
+                        high-performance Flutter development for Android, iOS, Web, and PWA. I recently built and
+                        launched <a href="https://eventiran.com" target="_blank" rel="noopener" style="color: var(--accent-light);">Event Iran</a>,
+                        an event discovery platform, and published
+                        <a href="https://pub.dev/packages/outline_mobileproxy" target="_blank" rel="noopener" style="color: var(--accent-light);">outline_mobileproxy</a>
+                        on pub.dev.
+                    </p>
+                    <div class="about-actions">
+                        <a href="assets/docs/Naeim-Lotfali-Resume.pdf" download class="btn btn-primary btn-sm">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Download Resume
+                        </a>
+                        <a href="https://linkedin.com/in/naeim-lotfali" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">LinkedIn</a>
+                        <a href="https://github.com/naeimlotfali" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Apps Delivered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Platforms (Android, iOS, Web, PWA)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Published pub.dev Plugin</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Competencies ================= -->
+    <section class="section section-alt" id="competencies">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Core Competencies</span>
+                <h2 class="section-title">What I Bring to the Table</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="competencies-grid">
+                <div class="competency-card reveal">
+                    <div class="competency-icon">📱</div>
+                    <h3>Cross-Platform Mobile Development</h3>
+                    <p>Building native-quality apps with Flutter for Android, iOS, Web & PWA from a single codebase.</p>
+                </div>
+                <div class="competency-card reveal">
+                    <div class="competency-icon">🏗️</div>
+                    <h3>Clean Architecture & Scalable Design</h3>
+                    <p>Implementing maintainable, testable architectures with MVVM, BLoC, and Cubit patterns.</p>
+                </div>
+                <div class="competency-card reveal">
+                    <div class="competency-icon">⚡</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Deep expertise in memory management, rendering optimization, and smooth animations.</p>
+                </div>
+                <div class="competency-card reveal">
+                    <div class="competency-icon">🔄</div>
+                    <h3>Real-time & Offline-first Systems</h3>
+                    <p>Building resilient applications that work seamlessly with or without network connectivity.</p>
+                </div>
+                <div class="competency-card reveal">
+                    <div class="competency-icon">🧩</div>
+                    <h3>Plugin & Native Integration</h3>
+                    <p>Authoring Flutter plugins with Kotlin/Swift platform channels, native binaries, and CI verification.</p>
+                </div>
+                <div class="competency-card reveal">
+                    <div class="competency-icon">🎨</div>
+                    <h3>UI/UX Implementation</h3>
+                    <p>Pixel-perfect Material Design implementation with custom widgets, RTL support, and smooth transitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Projects ================= -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Event Iran -->
+            <div class="featured-project reveal">
+                <div class="featured-visual eventiran">
+                    <img src="assets/images/eventiran_logo.png" alt="Event Iran logo">
+                </div>
+                <div class="featured-content">
+                    <span class="project-type">Personal Project · Live Product · 2026</span>
+                    <h3>Event Iran — Event Discovery Platform</h3>
+                    <p>
+                        A platform for discovering and registering for online and in-person events across Iran,
+                        which I designed, built, and launched end-to-end as a solo developer. Live on the web at
+                        eventiran.com with a released Android APK. Features event search with map-based discovery,
+                        registration, calendar integration, and a fully Persian (RTL) experience.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Flutter</span>
+                        <span class="skill-tag sm">Clean Architecture</span>
+                        <span class="skill-tag sm">BLoC</span>
+                        <span class="skill-tag sm">Supabase</span>
+                        <span class="skill-tag sm">go_router</span>
+                        <span class="skill-tag sm">flutter_map</span>
+                        <span class="skill-tag sm">Web + Android</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://eventiran.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit eventiran.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D2Type -->
+            <div class="featured-project reveal">
+                <div class="featured-visual">
+                    <img src="assets/images/d2type_icon.png" alt="D2Type app icon" style="border-radius: 24px;">
+                </div>
+                <div class="featured-content">
+                    <span class="project-type">Live on App Store & Google Play</span>
+                    <h3>D2Type — Diabetes Prevention & Management</h3>
+                    <p>
+                        A digital health platform helping people with prediabetes or Type 2 diabetes prevent,
+                        delay, and reverse the condition through lifestyle change. Users complete a health,
+                        family history, and lifestyle questionnaire and follow a personalized program with
+                        progress tracking, goals, and interactive lessons. I contributed to the Flutter app,
+                        published on both stores.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Flutter</span>
+                        <span class="skill-tag sm">Clean Architecture</span>
+                        <span class="skill-tag sm">Personalized Logic</span>
+                        <span class="skill-tag sm">Questionnaires</span>
+                        <span class="skill-tag sm">iOS + Android + PWA</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://apps.apple.com/us/app/d2type/id6469694752" target="_blank" rel="noopener" class="btn btn-primary btn-sm">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.webnegah.d2type.d2type_application" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Google Play</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- outline_mobileproxy -->
+            <div class="featured-project reveal">
+                <div class="featured-visual">
+                    <div class="code-badge">
+                        pub.dev<br>outline_mobileproxy
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <span class="project-type">Open Source · Flutter Plugin · 2026</span>
+                    <h3>outline_mobileproxy — Flutter Plugin</h3>
+                    <p>
+                        A Flutter plugin wrapping the Outline SDK's Mobileproxy library: it runs a local HTTP proxy
+                        on-device (Android & iOS) backed by Shadowsocks, SOCKS5, or an auto-selecting Smart Dialer —
+                        with no VPN permissions required. Ships prebuilt Go Mobile native binaries with a
+                        reproducibility-focused CI pipeline that rebuilds and verifies them on every change.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Dart</span>
+                        <span class="skill-tag sm">Kotlin</span>
+                        <span class="skill-tag sm">Swift</span>
+                        <span class="skill-tag sm">Go Mobile</span>
+                        <span class="skill-tag sm">Networking</span>
+                        <span class="skill-tag sm">GitHub Actions CI</span>
+                        <span class="skill-tag sm">Integration Tests</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pub.dev/packages/outline_mobileproxy" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on pub.dev</a>
+                        <a href="https://github.com/naeimlotfali/outline_mobileproxy" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <img src="assets/images/project1.jpg" alt="Solution Tablet app screenshots">
+                    <div class="project-body">
+                        <h3>Solution Tablet — Field Sales & Distribution</h3>
+                        <p>
+                            Intelligent routing and real-time tracking of visitors, distributors, and merchandisers.
+                            Supports hot & cold sales, offline and online, a real-time discount system, and
+                            customized inventory reports.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-tag sm">Android (Java + Kotlin)</span>
+                            <span class="skill-tag sm">OpenStreetMap</span>
+                            <span class="skill-tag sm">Clean Architecture</span>
+                            <span class="skill-tag sm">OCR</span>
+                            <span class="skill-tag sm">Multi-language</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <img src="assets/images/project2.jpg" alt="Warehouse Management app screenshots">
+                    <div class="project-body">
+                        <h3>Warehouse Management</h3>
+                        <p>
+                            Complete warehouse solution: receipt & remittance entry, packer utility, stock taking,
+                            and OCR-based product detection.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-tag sm">Android (Kotlin)</span>
+                            <span class="skill-tag sm">Clean Architecture (MVP)</span>
+                            <span class="skill-tag sm">OCR</span>
+                            <span class="skill-tag sm">Room</span>
+                            <span class="skill-tag sm">Dagger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <img src="assets/images/project3.jpg" alt="Driver Application screenshots">
+                    <div class="project-body">
+                        <h3>Driver Application — Logistics</h3>
+                        <p>
+                            End-to-end flow for receiving goods from the factory and delivering them to bakeries:
+                            real-time driver tracking, questionnaires, digital signatures, and photo capture.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-tag sm">Android (Kotlin)</span>
+                            <span class="skill-tag sm">MVVM</span>
+                            <span class="skill-tag sm">Coroutines</span>
+                            <span class="skill-tag sm">OpenStreetMap</span>
+                            <span class="skill-tag sm">FCM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <img src="assets/images/project4.jpg" alt="Mining Application screenshots">
+                    <div class="project-body">
+                        <h3>Mining Operations App</h3>
+                        <p>
+                            A widely used app for mining operations: tracking daily machine and workforce activity,
+                            monitoring equipment condition, and general reporting.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-tag sm">Flutter</span>
+                            <span class="skill-tag sm">Clean Architecture</span>
+                            <span class="skill-tag sm">BLoC & Cubit</span>
+                            <span class="skill-tag sm">Moor DB</span>
+                            <span class="skill-tag sm">FCM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-body">
+                        <h3><img src="assets/images/calorito_icon.png" alt="Calorito icon">Calorito — Health & Nutrition</h3>
+                        <p>
+                            Cross-platform health app with daily calorie logging, height/weight & BMI tracking,
+                            food tracking, personalized dietary advice, and real-time chat with nutritionists.
+                            Deployed on Android and PWA.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-tag sm">Flutter</span>
+                            <span class="skill-tag sm">Clean Architecture</span>
+                            <span class="skill-tag sm">BLoC</span>
+                            <span class="skill-tag sm">Local Storage</span>
+                            <span class="skill-tag sm">Real-time Chat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Experience ================= -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">Where I've Worked</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Flutter Developer — Personal Project</h3>
+                            <div class="company"><a href="https://eventiran.com" target="_blank" rel="noopener">Event Iran — eventiran.com</a></div>
+                        </div>
+                        <span class="timeline-date">2026 – Present</span>
+                    </div>
+                    <div class="timeline-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Tehran, Iran — Remote
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Designed, built, and launched Event Iran — a platform for discovering and registering for online and in-person events across Iran — as a solo end-to-end product.</li>
+                        <li>Shipped to production on Web (eventiran.com) and Android (released APK) from a single Flutter codebase.</li>
+                        <li>Architected with Clean Architecture, BLoC, and go_router; backed by Supabase for auth, data, and storage.</li>
+                        <li>Implemented map-based event discovery (flutter_map, geolocation), Persian calendar support, calendar integration, sharing, and a fully RTL Persian UI.</li>
+                        <li>Published the open-source Flutter plugin <em>outline_mobileproxy</em> on pub.dev, wrapping the Outline SDK's Mobileproxy Go library with a verifiable native-binary CI pipeline.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Mobile Application Developer</h3>
+                            <div class="company">Pars Royal</div>
+                        </div>
+                        <span class="timeline-date">09/2019 – 09/2023</span>
+                    </div>
+                    <div class="timeline-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Tehran, Iran
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Led development of 10+ Flutter-based applications deployed across Android, iOS, and Web platforms.</li>
+                        <li>Designed and implemented a real-time field staff tracking system with offline support and POS integration.</li>
+                        <li>Built an intelligent routing system to optimize delivery operations and improve distributor efficiency.</li>
+                        <li>Engineered a warehouse management application with OCR-based product detection and inventory workflows.</li>
+                        <li>Developed enterprise reporting and task management systems with live tracking, PDF/Excel exports, and interactive dashboards.</li>
+                        <li>Delivered industry-specific applications for mining operations, truck inspection, and cosmetic e-commerce workflows.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Flutter & Android Developer</h3>
+                            <div class="company">Freelance</div>
+                        </div>
+                        <span class="timeline-date">2019 – Present</span>
+                    </div>
+                    <div class="timeline-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Remote
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Developed a cross-platform health and nutrition application with calorie tracking, BMI monitoring, and real-time nutritionist chat.</li>
+                        <li>Built a dual-sided service marketplace platform with separate customer and specialist applications.</li>
+                        <li>Contributed to a diabetes prevention and management app generating personalized health guidance.</li>
+                        <li>Developed an Android application for municipal inspection officers using MVVM, Dagger, Room, RxJava, and OpenStreetMap.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Skills ================= -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Technical Skills</span>
+                <h2 class="section-title">My Tech Arsenal</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-container reveal">
+                <div class="skill-category">
+                    <h3><span class="icon">💻</span> Languages & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="icon">🏛️</span> Architecture & Patterns</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Clean Architecture</span>
+                        <span class="skill-tag">MVVM</span>
+                        <span class="skill-tag">BLoC</span>
+                        <span class="skill-tag">Cubit</span>
+                        <span class="skill-tag">Provider</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="icon">🔌</span> APIs & Integration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">WebSockets</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Push Notifications</span>
+                        <span class="skill-tag">Google Maps API</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="icon">🧩</span> Plugin & Native Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Platform Channels</span>
+                        <span class="skill-tag">pub.dev Publishing</span>
+                        <span class="skill-tag">Go Mobile Bindings</span>
+                        <span class="skill-tag">Integration Testing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="icon">🚀</span> Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Android (APK, AAB)</span>
+                        <span class="skill-tag">iOS / TestFlight</span>
+                        <span class="skill-tag">Web</span>
+                        <span class="skill-tag">PWA</span>
+                        <span class="skill-tag">Play Store</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="icon">🛠️</span> Tools & Other</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">GitLab</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Localization / RTL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Education ================= -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Education</span>
+                <h2 class="section-title">Academic Background</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="education-card reveal">
+                <div class="education-icon">🎓</div>
+                <div class="education-content">
+                    <h3>University of Kashan</h3>
+                    <div class="degree">B.S. in Computer Science</div>
+                    <div class="year">2015 – 2019 · Kashan, Iran</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Languages ================= -->
+    <section class="section" id="languages">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Languages</span>
+                <h2 class="section-title">Communication Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="languages-grid reveal">
+                <div class="language-card">
+                    <div class="language-flag">🇮🇷</div>
+                    <div class="language-info">
+                        <h3>Persian</h3>
+                        <div class="level">Native</div>
+                        <div class="language-bar">
+                            <div class="language-bar-fill" style="width: 0%" data-width="100%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-flag">🇬🇧</div>
+                    <div class="language-info">
+                        <h3>English</h3>
+                        <div class="level">Professional Working Proficiency</div>
+                        <div class="language-bar">
+                            <div class="language-bar-fill" style="width: 0%" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-grid reveal">
+                <a href="mailto:naeim.lotfali@gmail.com" class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-info">
+                        <div class="label">Email</div>
+                        <div class="value">naeim.lotfali@gmail.com</div>
+                    </div>
+                </a>
+                <a href="tel:+989383380132" class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-info">
+                        <div class="label">Phone</div>
+                        <div class="value">+98 938 338 0132</div>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/naeim-lotfali" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-info">
+                        <div class="label">LinkedIn</div>
+                        <div class="value">linkedin.com/in/naeim-lotfali</div>
+                    </div>
+                </a>
+                <a href="https://github.com/naeimlotfali" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon">🐙</div>
+                    <div class="contact-info">
+                        <div class="label">GitHub</div>
+                        <div class="value">github.com/naeimlotfali</div>
+                    </div>
+                </a>
+                <a href="https://pub.dev/packages/outline_mobileproxy" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon">📦</div>
+                    <div class="contact-info">
+                        <div class="label">pub.dev</div>
+                        <div class="value">outline_mobileproxy</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="year">2026</span> Naeim Lotfali. Crafted with Flutter & ❤️</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
