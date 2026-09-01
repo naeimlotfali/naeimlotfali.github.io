@@ -253,26 +253,12 @@
                     <span class="project-type">Personal Project · Published Game · 2026</span>
                     <h3><img class="project-icon" src="assets/images/parto_icon.png" alt="Parto app icon">Parto (پرتو) — One-Touch Rhythm Game</h3>
                     <p>
-                        A one-touch rhythm platformer built solo with <strong>Flutter + Flame</strong> and published on
-                        Cafe Bazaar. Fifteen hand-authored levels (~27 minutes of play) across four movement modes —
-                        jump, fly, gravity flip, and wave — every obstacle placed on the beat. The entire visual
-                        identity is <strong>procedural</strong>: neon on a generated Persian <em>girih</em> lattice,
-                        with no bitmap art assets in the build at all.
-                    </p>
-                    <p>
-                        The engineering bet was to keep physics and collision in <strong>pure Dart with no Flame or
-                        Flutter imports</strong>, so &ldquo;is this section actually clearable?&rdquo; is a unit test
-                        rather than a manual playthrough. Levels are authored in beats and compiled to JSON by a build
-                        script that <em>validates</em> them — it refuses to emit a level with an impassable gap, a coin
-                        inside a wall or beyond jump reach, or a block taller than the apex of the small jump, which is
-                        1.54 tiles rather than 2.29 and impossible to catch by eye. Backed by ~170 unit tests over a
-                        ~10.8k-line codebase.
-                    </p>
-                    <p>
-                        It also ships the full production surface: Tapsell rewarded &amp; interstitial ads behind a
-                        tested frequency policy (never after a death), Poolakey in-app purchases, audio-clocked beat
-                        sync via ExoPlayer positions, haptics, persistent progress, a Persian RTL UI with Persian
-                        numerals, and a signed release pipeline.
+                        A one-touch rhythm platformer built solo with Flutter + Flame and published on Cafe Bazaar:
+                        15 hand-authored levels across four movement modes, every obstacle placed on the beat, and
+                        visuals that are entirely procedural — neon on a generated Persian <em>girih</em> lattice, with
+                        no art assets in the build. Physics and collision live in pure Dart with no engine imports, so
+                        level solvability is a unit test rather than a manual playthrough (~170 tests). Ships with ad
+                        mediation, in-app purchases, and a Persian RTL UI.
                     </p>
                     <div class="skill-tags">
                         <span class="skill-tag sm">Flutter</span>
@@ -282,8 +268,7 @@
                         <span class="skill-tag sm">go_router</span>
                         <span class="skill-tag sm">Procedural Graphics</span>
                         <span class="skill-tag sm">Audio Beat Sync</span>
-                        <span class="skill-tag sm">In-App Purchases</span>
-                        <span class="skill-tag sm">Ads Mediation</span>
+                        <span class="skill-tag sm">In-App Purchases &amp; Ads</span>
                         <span class="skill-tag sm">170 Unit Tests</span>
                     </div>
                     <div class="project-links">
@@ -303,68 +288,12 @@
                     <span class="project-type">Open Source · Dart Package · 2026</span>
                     <h3>pardakht — One API Across Iranian Payment Gateways</h3>
                     <p>
-                        Every Iranian payment provider ships, at best, a thin single-gateway wrapper — so changing
-                        provider means rewriting the integration. <strong>pardakht</strong> puts one type-safe
-                        interface, one error taxonomy and one money type in front of all of them. It is
-                        <strong>pure Dart with no Flutter dependency</strong>, so the same code runs in a
-                        <code>shelf</code> backend, a CLI, and a Flutter app. Seven gateways ship today: Zarinpal,
-                        Zibal, IDPay, PayPing, Pay.ir, Vandar and IranDargah.
-                    </p>
-                    <p>
-                        The package is built around the failure modes that actually cost merchants money:
-                    </p>
-                    <ul class="feature-list">
-                        <li>
-                            <strong>Units that can't be confused.</strong> Some gateways take Rial, some take Toman, and
-                            one Toman is ten Rial — passing a bare <code>int</code> is how a customer gets charged ten
-                            times the price. A <code>Money</code> type makes the mistake unrepresentable; each adapter
-                            declares its native unit and converts internally, and any conversion that would round is a
-                            thrown error, not a silent adjustment.
-                        </li>
-                        <li>
-                            <strong>&ldquo;Already verified&rdquo; is a success, not a failure.</strong> Verifying twice
-                            is normal — the payer refreshes the callback, a request times out and retries, two callbacks
-                            race. Zarinpal answers <code>100</code> then <code>101</code>; Zibal <code>100</code> then
-                            <code>201</code>; PayPing HTTP <code>200</code> then <code>409</code>; Pay.ir returns the
-                            repeat as <code>errorCode: -6</code> through the same channel a genuine rejection uses. Every
-                            provider encodes the same fact differently, and code that recognises only the first shape
-                            refunds real payments. A dedicated <code>alreadyVerified</code> status makes that
-                            impossible to miss.
-                        </li>
-                        <li>
-                            <strong>Asymmetric retries as a safety property.</strong> <code>verify</code> and
-                            <code>inquire</code> retry on transport failures with exponential backoff and jitter;
-                            <code>createSession</code> and <code>refund</code> are <em>never</em> retried automatically,
-                            whatever the policy says — a request that failed in transit may still have been processed,
-                            and a retried refund pays the customer twice.
-                        </li>
-                        <li>
-                            <strong>Verification belongs on a server.</strong> A merchant key compiled into an APK is
-                            not secret. Proxy mode (<code>PaymentGateway.remote</code>) lets mobile and web clients call
-                            your own backend instead of the provider, holding no credential and — just as importantly —
-                            no say in what an order costs.
-                        </li>
-                        <li>
-                            <strong>A sealed error hierarchy.</strong> Every failure is a <code>PaymentException</code>,
-                            so a <code>switch</code> over it is checked for exhaustiveness at compile time. Provider
-                            codes are normalised while the original code and Persian message are preserved; payer-facing
-                            wording comes from an injectable resolver shipping English and Persian maps.
-                        </li>
-                        <li>
-                            <strong>Logging that can't leak.</strong> Silent by default; when a logger is attached,
-                            credentials are redacted by exact value — each credential type declares its own secrets, so
-                            redaction never depends on guessing field names — with card numbers, national IDs, IBANs and
-                            auth headers masked by pattern as a second layer.
-                        </li>
-                    </ul>
-                    <p>
-                        Every capability in the support matrix is filled in only once confirmed against the provider's
-                        own documentation and pinned by a test, with a per-gateway spec citing a URL and retrieval date
-                        for each claim — and adapters that couldn't be verified live say so explicitly rather than
-                        implying confidence they don't have. That discipline caught a real bug before release: an
-                        adapter written against a stale community docs mirror was pointed at Vandar's dead
-                        <code>v3</code> endpoints, found and fixed by checking the vendor's current API. ~7.3k lines,
-                        ~680 tests across 40 test files.
+                        Iranian payment providers each ship their own thin wrapper, so switching provider means
+                        rewriting the integration. pardakht puts one type-safe interface across seven of them, in pure
+                        Dart with no Flutter dependency. It is built around the failure modes that cost merchants
+                        money: a money type that makes the Rial/Toman mix-up unrepresentable, a first-class
+                        &ldquo;already verified&rdquo; status, server-side verification with a proxy mode so no
+                        merchant key ships in an app, and retries that never repeat a session or a refund. ~680 tests.
                     </p>
                     <div class="skill-tags">
                         <span class="skill-tag sm">Dart (no Flutter)</span>
@@ -394,24 +323,11 @@
                     <span class="project-type">Open Source · Flutter Plugin · 2026</span>
                     <h3>psiphon_mobileproxy — Flutter Plugin</h3>
                     <p>
-                        A Flutter plugin that runs a Psiphon tunnel on-device and puts a local HTTP CONNECT proxy in
-                        front of it, on Android and iOS. Point an HTTP client, gRPC channel, or WebView at the returned
-                        local address and that traffic goes over the tunnel — <strong>with no VPN permission</strong>,
-                        no <code>VpnService</code> and no <code>NEPacketTunnelProvider</code>, so nothing else on the
-                        device is affected and clients opt in one at a time.
-                    </p>
-                    <p>
-                        Upstream's own bindings expose Psiphon only as a fallback parser on the Smart Dialer, started
-                        with a background context and with no way to shut it down — stopping the proxy would close the
-                        listener and leave the tunnel burning battery and data for the life of the process. This plugin
-                        ships a small, deliberately readable <strong>Go shim</strong> that keeps tunnel and listener as
-                        one unit, so <code>stop()</code> really disconnects and <code>start()</code> can take a timeout.
-                        Prebuilt Android AAR and iOS XCFramework binaries are built with Go Mobile from fully pinned
-                        sources, and CI rebuilds them on every push: it re-derives the recorded source digest, diffs the
-                        generated iOS header byte-for-byte, compares the Android API surface with <code>javap</code>,
-                        runs integration tests on a real emulator and simulator, and publishes the fresh artifacts for
-                        independent comparison. Published separately under GPL-3.0 precisely so its sibling
-                        <em>outline_mobileproxy</em> stays Apache-2.0 and obligation-free.
+                        A Flutter plugin that runs a Psiphon tunnel on-device behind a local HTTP proxy (Android &amp;
+                        iOS). Point an HTTP client or WebView at the returned address and that traffic goes over the
+                        tunnel — no VPN permission required, and nothing else on the device is affected. It ships a
+                        small Go shim so <code>stop()</code> really disconnects and <code>start()</code> takes a
+                        timeout, with prebuilt Go Mobile binaries that CI rebuilds and verifies on every change.
                     </p>
                     <div class="skill-tags">
                         <span class="skill-tag sm">Dart</span>

@@ -171,28 +171,22 @@
         </li>
         <li>
             Built and published <a href="https://cafebazaar.ir/app/ir.parto.game">Parto</a>, a one-touch rhythm game
-            (Flutter + Flame) on Cafe Bazaar: 15 hand-authored levels across four movement modes, a fully procedural
-            neon visual identity with no bitmap art assets, audio-clocked beat synchronization, Tapsell ad mediation
-            behind a tested frequency policy, and Poolakey in-app purchases. Physics and collision live in pure Dart
-            with no engine imports, so level solvability is a unit test rather than a manual playthrough — ~170 tests
-            over ~10.8k lines, with a level compiler that refuses to emit an unclearable level.
+            (Flutter + Flame) on Cafe Bazaar: 15 hand-authored levels across four movement modes, fully procedural
+            neon visuals, beat-synchronized gameplay, ad mediation and in-app purchases. Physics and collision live in
+            pure Dart with no engine imports, so level solvability is a unit test rather than a manual playthrough
+            (~170 tests).
         </li>
         <li>
             Published <a href="https://pub.dev/packages/pardakht">pardakht</a> on pub.dev — one type-safe Dart API
-            across seven Iranian payment gateways (Zarinpal, Zibal, IDPay, PayPing, Pay.ir, Vandar, IranDargah).
-            Designed around the failure modes that cost merchants money: an explicit money type that makes the
-            Rial/Toman confusion unrepresentable, a first-class “already verified” status because every provider
-            encodes a repeat verification differently, a sealed error taxonomy checked for exhaustiveness at compile
-            time, credential-value log redaction, server-side verification with a proxy mode for mobile clients, and
-            deliberately asymmetric retries so state-changing calls are never retried automatically. ~680 tests.
+            across seven Iranian payment gateways, with an explicit money type, a sealed error taxonomy, server-side
+            verification with a proxy mode for mobile clients, and deliberately asymmetric retries so state-changing
+            calls are never retried automatically. ~680 tests.
         </li>
         <li>
             Published the Flutter plugins <a href="https://pub.dev/packages/outline_mobileproxy">outline_mobileproxy</a>
             and <a href="https://pub.dev/packages/psiphon_mobileproxy">psiphon_mobileproxy</a> — on-device local HTTP
-            proxies (Shadowsocks / SOCKS5 / Smart Dialer, and Psiphon) that need no VPN permission. Both ship prebuilt
-            Go Mobile binaries for Android and iOS from pinned sources, verified on every push by CI that re-derives
-            the recorded source digest, diffs the generated native API surface, and runs integration tests on a real
-            emulator and simulator.
+            proxies (Shadowsocks / SOCKS5 / Smart Dialer, and Psiphon) that need no VPN permission, shipping prebuilt
+            Go Mobile binaries for Android and iOS that CI rebuilds and verifies on every change.
         </li>
     </ul>
 </div>
