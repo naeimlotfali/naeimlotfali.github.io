@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naeim Lotfali — Flutter & Mobile Application Developer</title>
-    <meta name="description" content="Naeim Lotfali — Flutter & Mobile Application Developer with 6+ years of experience. Builder of Event Iran (eventiran.com), the outline_mobileproxy Flutter plugin, and 10+ production apps for Android, iOS, Web & PWA.">
+    <meta name="description" content="Naeim Lotfali — Flutter & Mobile Application Developer with 6+ years of experience. Builder of Event Iran (eventiran.com), the Parto rhythm game, three published pub.dev packages (pardakht, psiphon_mobileproxy, outline_mobileproxy), and 10+ production apps for Android, iOS, Web & PWA.">
     <meta name="author" content="Naeim Lotfali">
     <meta name="theme-color" content="#05080f">
 
@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naeimlotfali.github.io/">
     <meta property="og:title" content="Naeim Lotfali — Flutter & Mobile Application Developer">
-    <meta property="og:description" content="Flutter developer with 6+ years of experience building production apps for Android, iOS, Web & PWA — including Event Iran and the outline_mobileproxy plugin on pub.dev.">
+    <meta property="og:description" content="Flutter developer with 6+ years of experience building production apps for Android, iOS, Web & PWA — including Event Iran, the Parto rhythm game, and three published packages on pub.dev.">
     <meta property="og:image" content="https://naeimlotfali.github.io/assets/images/profile.png">
     <meta name="twitter:card" content="summary">
     <link rel="canonical" href="https://naeimlotfali.github.io/">
@@ -100,9 +100,18 @@
                         Experienced in Clean Architecture, real-time systems, offline-first applications, and
                         high-performance Flutter development for Android, iOS, Web, and PWA. I recently built and
                         launched <a href="https://eventiran.com" target="_blank" rel="noopener" style="color: var(--accent-light);">Event Iran</a>,
-                        an event discovery platform, and published
+                        an event discovery platform, and
+                        <a href="https://cafebazaar.ir/app/ir.parto.game" target="_blank" rel="noopener" style="color: var(--accent-light);">Parto</a>,
+                        a one-touch rhythm game built with Flutter and Flame.
+                    </p>
+                    <p>
+                        I also publish open source on pub.dev:
+                        <a href="https://pub.dev/packages/pardakht" target="_blank" rel="noopener" style="color: var(--accent-light);">pardakht</a>,
+                        a single type-safe API across seven Iranian payment gateways, plus the
+                        <a href="https://pub.dev/packages/psiphon_mobileproxy" target="_blank" rel="noopener" style="color: var(--accent-light);">psiphon_mobileproxy</a>
+                        and
                         <a href="https://pub.dev/packages/outline_mobileproxy" target="_blank" rel="noopener" style="color: var(--accent-light);">outline_mobileproxy</a>
-                        on pub.dev.
+                        plugins, which ship verified Go Mobile native binaries for Android and iOS.
                     </p>
                     <div class="about-actions">
                         <a href="assets/docs/Naeim-Lotfali-Resume.pdf" download class="btn btn-primary btn-sm">
@@ -128,8 +137,8 @@
                     <div class="stat-label">Platforms (Android, iOS, Web, PWA)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Published pub.dev Plugin</div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Published pub.dev Packages</div>
                 </div>
             </div>
         </div>
@@ -168,6 +177,16 @@
                     <div class="competency-icon">🧩</div>
                     <h3>Plugin & Native Integration</h3>
                     <p>Authoring Flutter plugins with Kotlin/Swift platform channels, native binaries, and CI verification.</p>
+                </div>
+                <div class="competency-card reveal">
+                    <div class="competency-icon">🎮</div>
+                    <h3>Game Development &amp; Real-time Loops</h3>
+                    <p>Flutter + Flame games with headless, unit-testable physics, procedural graphics, and audio-clocked beat synchronisation.</p>
+                </div>
+                <div class="competency-card reveal">
+                    <div class="competency-icon">💳</div>
+                    <h3>Payments &amp; Monetization</h3>
+                    <p>Payment gateway integration, server-side verification, in-app purchases, and ad mediation — designed around the failure modes that cost money.</p>
                 </div>
                 <div class="competency-card reveal">
                     <div class="competency-icon">🎨</div>
@@ -217,6 +236,232 @@
                 </div>
             </div>
 
+            <!-- Parto -->
+            <div class="gallery-project reveal">
+                <div class="gallery dark" id="partoGallery"
+                     data-alt="Parto — "
+                     data-images="assets/images/parto_1.jpg|assets/images/parto_2.jpg|assets/images/parto_3.jpg|assets/images/parto_4.jpg"
+                     data-captions="Main menu — procedural Persian girih pattern, no image assets|Level select — per-level best-percentage progress|Level 4 &laquo;Tondbad&raquo; — jump mode, beat-aligned obstacles|&laquo;Rahroye Noor&raquo; — wave mode with a speed portal ahead">
+                    <img class="gallery-img" src="assets/images/parto_1.jpg" alt="Parto — main menu">
+                    <button class="gallery-nav prev" aria-label="Previous screen">&#8249;</button>
+                    <button class="gallery-nav next" aria-label="Next screen">&#8250;</button>
+                    <div class="gallery-counter"><span class="cur">1</span>/<span class="total">4</span></div>
+                    <div class="gallery-caption">Main menu</div>
+                </div>
+                <div class="gallery-dots" aria-label="Screens"></div>
+                <div class="featured-content">
+                    <span class="project-type">Personal Project · Published Game · 2026</span>
+                    <h3><img class="project-icon" src="assets/images/parto_icon.png" alt="Parto app icon">Parto (پرتو) — One-Touch Rhythm Game</h3>
+                    <p>
+                        A one-touch rhythm platformer built solo with <strong>Flutter + Flame</strong> and published on
+                        Cafe Bazaar. Fifteen hand-authored levels (~27 minutes of play) across four movement modes —
+                        jump, fly, gravity flip, and wave — every obstacle placed on the beat. The entire visual
+                        identity is <strong>procedural</strong>: neon on a generated Persian <em>girih</em> lattice,
+                        with no bitmap art assets in the build at all.
+                    </p>
+                    <p>
+                        The engineering bet was to keep physics and collision in <strong>pure Dart with no Flame or
+                        Flutter imports</strong>, so &ldquo;is this section actually clearable?&rdquo; is a unit test
+                        rather than a manual playthrough. Levels are authored in beats and compiled to JSON by a build
+                        script that <em>validates</em> them — it refuses to emit a level with an impassable gap, a coin
+                        inside a wall or beyond jump reach, or a block taller than the apex of the small jump, which is
+                        1.54 tiles rather than 2.29 and impossible to catch by eye. Backed by ~170 unit tests over a
+                        ~10.8k-line codebase.
+                    </p>
+                    <p>
+                        It also ships the full production surface: Tapsell rewarded &amp; interstitial ads behind a
+                        tested frequency policy (never after a death), Poolakey in-app purchases, audio-clocked beat
+                        sync via ExoPlayer positions, haptics, persistent progress, a Persian RTL UI with Persian
+                        numerals, and a signed release pipeline.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Flutter</span>
+                        <span class="skill-tag sm">Flame</span>
+                        <span class="skill-tag sm">Game Physics (pure Dart)</span>
+                        <span class="skill-tag sm">Riverpod</span>
+                        <span class="skill-tag sm">go_router</span>
+                        <span class="skill-tag sm">Procedural Graphics</span>
+                        <span class="skill-tag sm">Audio Beat Sync</span>
+                        <span class="skill-tag sm">In-App Purchases</span>
+                        <span class="skill-tag sm">Ads Mediation</span>
+                        <span class="skill-tag sm">170 Unit Tests</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://cafebazaar.ir/app/ir.parto.game" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get it on Cafe Bazaar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pardakht -->
+            <div class="featured-project reveal">
+                <div class="featured-visual">
+                    <div class="code-badge">
+                        pub.dev<br>pardakht
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <span class="project-type">Open Source · Dart Package · 2026</span>
+                    <h3>pardakht — One API Across Iranian Payment Gateways</h3>
+                    <p>
+                        Every Iranian payment provider ships, at best, a thin single-gateway wrapper — so changing
+                        provider means rewriting the integration. <strong>pardakht</strong> puts one type-safe
+                        interface, one error taxonomy and one money type in front of all of them. It is
+                        <strong>pure Dart with no Flutter dependency</strong>, so the same code runs in a
+                        <code>shelf</code> backend, a CLI, and a Flutter app. Seven gateways ship today: Zarinpal,
+                        Zibal, IDPay, PayPing, Pay.ir, Vandar and IranDargah.
+                    </p>
+                    <p>
+                        The package is built around the failure modes that actually cost merchants money:
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>Units that can't be confused.</strong> Some gateways take Rial, some take Toman, and
+                            one Toman is ten Rial — passing a bare <code>int</code> is how a customer gets charged ten
+                            times the price. A <code>Money</code> type makes the mistake unrepresentable; each adapter
+                            declares its native unit and converts internally, and any conversion that would round is a
+                            thrown error, not a silent adjustment.
+                        </li>
+                        <li>
+                            <strong>&ldquo;Already verified&rdquo; is a success, not a failure.</strong> Verifying twice
+                            is normal — the payer refreshes the callback, a request times out and retries, two callbacks
+                            race. Zarinpal answers <code>100</code> then <code>101</code>; Zibal <code>100</code> then
+                            <code>201</code>; PayPing HTTP <code>200</code> then <code>409</code>; Pay.ir returns the
+                            repeat as <code>errorCode: -6</code> through the same channel a genuine rejection uses. Every
+                            provider encodes the same fact differently, and code that recognises only the first shape
+                            refunds real payments. A dedicated <code>alreadyVerified</code> status makes that
+                            impossible to miss.
+                        </li>
+                        <li>
+                            <strong>Asymmetric retries as a safety property.</strong> <code>verify</code> and
+                            <code>inquire</code> retry on transport failures with exponential backoff and jitter;
+                            <code>createSession</code> and <code>refund</code> are <em>never</em> retried automatically,
+                            whatever the policy says — a request that failed in transit may still have been processed,
+                            and a retried refund pays the customer twice.
+                        </li>
+                        <li>
+                            <strong>Verification belongs on a server.</strong> A merchant key compiled into an APK is
+                            not secret. Proxy mode (<code>PaymentGateway.remote</code>) lets mobile and web clients call
+                            your own backend instead of the provider, holding no credential and — just as importantly —
+                            no say in what an order costs.
+                        </li>
+                        <li>
+                            <strong>A sealed error hierarchy.</strong> Every failure is a <code>PaymentException</code>,
+                            so a <code>switch</code> over it is checked for exhaustiveness at compile time. Provider
+                            codes are normalised while the original code and Persian message are preserved; payer-facing
+                            wording comes from an injectable resolver shipping English and Persian maps.
+                        </li>
+                        <li>
+                            <strong>Logging that can't leak.</strong> Silent by default; when a logger is attached,
+                            credentials are redacted by exact value — each credential type declares its own secrets, so
+                            redaction never depends on guessing field names — with card numbers, national IDs, IBANs and
+                            auth headers masked by pattern as a second layer.
+                        </li>
+                    </ul>
+                    <p>
+                        Every capability in the support matrix is filled in only once confirmed against the provider's
+                        own documentation and pinned by a test, with a per-gateway spec citing a URL and retrieval date
+                        for each claim — and adapters that couldn't be verified live say so explicitly rather than
+                        implying confidence they don't have. That discipline caught a real bug before release: an
+                        adapter written against a stale community docs mirror was pointed at Vandar's dead
+                        <code>v3</code> endpoints, found and fixed by checking the vendor's current API. ~7.3k lines,
+                        ~680 tests across 40 test files.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Dart (no Flutter)</span>
+                        <span class="skill-tag sm">Payment Gateways</span>
+                        <span class="skill-tag sm">API Design</span>
+                        <span class="skill-tag sm">Sealed Types</span>
+                        <span class="skill-tag sm">Idempotency</span>
+                        <span class="skill-tag sm">Security</span>
+                        <span class="skill-tag sm">Backend (shelf)</span>
+                        <span class="skill-tag sm">680+ Tests</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pub.dev/packages/pardakht" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on pub.dev</a>
+                        <a href="https://github.com/naeimlotfali/pardakht" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- psiphon_mobileproxy -->
+            <div class="featured-project reveal">
+                <div class="featured-visual">
+                    <div class="code-badge">
+                        pub.dev<br>psiphon_mobileproxy
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <span class="project-type">Open Source · Flutter Plugin · 2026</span>
+                    <h3>psiphon_mobileproxy — Flutter Plugin</h3>
+                    <p>
+                        A Flutter plugin that runs a Psiphon tunnel on-device and puts a local HTTP CONNECT proxy in
+                        front of it, on Android and iOS. Point an HTTP client, gRPC channel, or WebView at the returned
+                        local address and that traffic goes over the tunnel — <strong>with no VPN permission</strong>,
+                        no <code>VpnService</code> and no <code>NEPacketTunnelProvider</code>, so nothing else on the
+                        device is affected and clients opt in one at a time.
+                    </p>
+                    <p>
+                        Upstream's own bindings expose Psiphon only as a fallback parser on the Smart Dialer, started
+                        with a background context and with no way to shut it down — stopping the proxy would close the
+                        listener and leave the tunnel burning battery and data for the life of the process. This plugin
+                        ships a small, deliberately readable <strong>Go shim</strong> that keeps tunnel and listener as
+                        one unit, so <code>stop()</code> really disconnects and <code>start()</code> can take a timeout.
+                        Prebuilt Android AAR and iOS XCFramework binaries are built with Go Mobile from fully pinned
+                        sources, and CI rebuilds them on every push: it re-derives the recorded source digest, diffs the
+                        generated iOS header byte-for-byte, compares the Android API surface with <code>javap</code>,
+                        runs integration tests on a real emulator and simulator, and publishes the fresh artifacts for
+                        independent comparison. Published separately under GPL-3.0 precisely so its sibling
+                        <em>outline_mobileproxy</em> stays Apache-2.0 and obligation-free.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Dart</span>
+                        <span class="skill-tag sm">Kotlin</span>
+                        <span class="skill-tag sm">Swift</span>
+                        <span class="skill-tag sm">Go / Go Mobile</span>
+                        <span class="skill-tag sm">Networking</span>
+                        <span class="skill-tag sm">Supply-chain Provenance</span>
+                        <span class="skill-tag sm">GitHub Actions CI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pub.dev/packages/psiphon_mobileproxy" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on pub.dev</a>
+                        <a href="https://github.com/naeimlotfali/psiphon_mobileproxy" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- outline_mobileproxy -->
+            <div class="featured-project reveal">
+                <div class="featured-visual">
+                    <div class="code-badge">
+                        pub.dev<br>outline_mobileproxy
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <span class="project-type">Open Source · Flutter Plugin · 2026</span>
+                    <h3>outline_mobileproxy — Flutter Plugin</h3>
+                    <p>
+                        A Flutter plugin wrapping the Outline SDK's Mobileproxy library: it runs a local HTTP proxy
+                        on-device (Android & iOS) backed by Shadowsocks, SOCKS5, or an auto-selecting Smart Dialer —
+                        with no VPN permissions required. Ships prebuilt Go Mobile native binaries with a
+                        reproducibility-focused CI pipeline that rebuilds and verifies them on every change. Apache-2.0,
+                        and the sibling of <em>psiphon_mobileproxy</em> above.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Dart</span>
+                        <span class="skill-tag sm">Kotlin</span>
+                        <span class="skill-tag sm">Swift</span>
+                        <span class="skill-tag sm">Go Mobile</span>
+                        <span class="skill-tag sm">Networking</span>
+                        <span class="skill-tag sm">GitHub Actions CI</span>
+                        <span class="skill-tag sm">Integration Tests</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pub.dev/packages/outline_mobileproxy" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on pub.dev</a>
+                        <a href="https://github.com/naeimlotfali/outline_mobileproxy" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- D2Type -->
             <div class="featured-project reveal">
                 <div class="featured-visual">
@@ -246,41 +491,11 @@
                 </div>
             </div>
 
-            <!-- outline_mobileproxy -->
-            <div class="featured-project reveal">
-                <div class="featured-visual">
-                    <div class="code-badge">
-                        pub.dev<br>outline_mobileproxy
-                    </div>
-                </div>
-                <div class="featured-content">
-                    <span class="project-type">Open Source · Flutter Plugin · 2026</span>
-                    <h3>outline_mobileproxy — Flutter Plugin</h3>
-                    <p>
-                        A Flutter plugin wrapping the Outline SDK's Mobileproxy library: it runs a local HTTP proxy
-                        on-device (Android & iOS) backed by Shadowsocks, SOCKS5, or an auto-selecting Smart Dialer —
-                        with no VPN permissions required. Ships prebuilt Go Mobile native binaries with a
-                        reproducibility-focused CI pipeline that rebuilds and verifies them on every change.
-                    </p>
-                    <div class="skill-tags">
-                        <span class="skill-tag sm">Dart</span>
-                        <span class="skill-tag sm">Kotlin</span>
-                        <span class="skill-tag sm">Swift</span>
-                        <span class="skill-tag sm">Go Mobile</span>
-                        <span class="skill-tag sm">Networking</span>
-                        <span class="skill-tag sm">GitHub Actions CI</span>
-                        <span class="skill-tag sm">Integration Tests</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://pub.dev/packages/outline_mobileproxy" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on pub.dev</a>
-                        <a href="https://github.com/naeimlotfali/outline_mobileproxy" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Solution+ Web (gallery) -->
             <div class="gallery-project reveal">
                 <div class="gallery" id="solutionWebGallery"
+                     data-alt="Solution+ web — "
+                     data-images="assets/images/solution_web_1.jpg|assets/images/solution_web_2.jpg|assets/images/solution_web_3.jpg|assets/images/solution_web_4.jpg|assets/images/solution_web_5.jpg|assets/images/solution_web_6.jpg|assets/images/solution_web_7.jpg|assets/images/solution_web_8.jpg"
                      data-captions="Reports &amp; modules hub|Analytics &amp; charts — PDF / Excel export|Live field-staff map|Orders &amp; driver assignment|Intelligent routing — optimized route|Multi-driver route split|Smart distribution module|Routing settings">
                     <img class="gallery-img" src="assets/images/solution_web_1.jpg" alt="Solution+ web — reports hub">
                     <button class="gallery-nav prev" aria-label="Previous screen">&#8249;</button>
@@ -440,8 +655,8 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-header">
                         <div>
-                            <h3>Flutter Developer — Personal Project</h3>
-                            <div class="company"><a href="https://eventiran.com" target="_blank" rel="noopener">Event Iran — eventiran.com</a></div>
+                            <h3>Flutter Developer — Independent Products &amp; Open Source</h3>
+                            <div class="company"><a href="https://eventiran.com" target="_blank" rel="noopener">Event Iran — eventiran.com</a> · Parto · pub.dev packages</div>
                         </div>
                         <span class="timeline-date">2026 – Present</span>
                     </div>
@@ -454,7 +669,9 @@
                         <li>Shipped to production on Web (eventiran.com) and Android — published on the Cafe Bazaar app market — from a single Flutter codebase.</li>
                         <li>Architected with Clean Architecture, BLoC, and go_router; backed by Supabase for auth, data, and storage.</li>
                         <li>Implemented map-based event discovery (flutter_map, geolocation), Persian calendar support, calendar integration, sharing, and a fully RTL Persian UI.</li>
-                        <li>Published the open-source Flutter plugin <em>outline_mobileproxy</em> on pub.dev, wrapping the Outline SDK's Mobileproxy Go library with a verifiable native-binary CI pipeline.</li>
+                        <li>Built and published <em>Parto</em>, a one-touch rhythm game (Flutter + Flame) on Cafe Bazaar — 15 hand-authored levels across four movement modes, fully procedural neon visuals, ads and in-app purchases, and ~170 unit tests over a headless pure-Dart physics core that makes level solvability a testable property.</li>
+                        <li>Published <em>pardakht</em> on pub.dev — one type-safe Dart API across seven Iranian payment gateways, with an explicit money type, a sealed error taxonomy, server-side verification and proxy mode, and deliberately asymmetric retries so state-changing calls are never retried automatically.</li>
+                        <li>Published the open-source Flutter plugins <em>outline_mobileproxy</em> and <em>psiphon_mobileproxy</em> on pub.dev — local on-device HTTP proxies needing no VPN permission, shipping Go Mobile native binaries for Android and iOS with a CI pipeline that rebuilds, digests, and functionally verifies them on every change.</li>
                     </ul>
                 </div>
                 <div class="timeline-item">
@@ -519,6 +736,9 @@
                         <span class="skill-tag">Flutter</span>
                         <span class="skill-tag">Kotlin</span>
                         <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Flame (game engine)</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -529,6 +749,7 @@
                         <span class="skill-tag">BLoC</span>
                         <span class="skill-tag">Cubit</span>
                         <span class="skill-tag">Provider</span>
+                        <span class="skill-tag">Riverpod</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -540,6 +761,9 @@
                         <span class="skill-tag">Supabase</span>
                         <span class="skill-tag">Push Notifications</span>
                         <span class="skill-tag">Google Maps API</span>
+                        <span class="skill-tag">Payment Gateways</span>
+                        <span class="skill-tag">In-App Purchases</span>
+                        <span class="skill-tag">Ads Mediation</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -549,6 +773,7 @@
                         <span class="skill-tag">pub.dev Publishing</span>
                         <span class="skill-tag">Go Mobile Bindings</span>
                         <span class="skill-tag">Integration Testing</span>
+                        <span class="skill-tag">Binary Provenance &amp; CI Verification</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -559,6 +784,8 @@
                         <span class="skill-tag">Web</span>
                         <span class="skill-tag">PWA</span>
                         <span class="skill-tag">Play Store</span>
+                        <span class="skill-tag">Cafe Bazaar</span>
+                        <span class="skill-tag">pub.dev</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -666,11 +893,18 @@
                         <div class="value">github.com/naeimlotfali</div>
                     </div>
                 </a>
-                <a href="https://pub.dev/packages/outline_mobileproxy" target="_blank" rel="noopener" class="contact-card">
+                <a href="https://pub.dev/packages/pardakht" target="_blank" rel="noopener" class="contact-card">
                     <div class="contact-icon">📦</div>
                     <div class="contact-info">
                         <div class="label">pub.dev</div>
-                        <div class="value">outline_mobileproxy</div>
+                        <div class="value">pardakht · psiphon_mobileproxy · outline_mobileproxy</div>
+                    </div>
+                </a>
+                <a href="https://cafebazaar.ir/app/ir.parto.game" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon">🎮</div>
+                    <div class="contact-info">
+                        <div class="label">Cafe Bazaar</div>
+                        <div class="value">Parto — پرتو</div>
                     </div>
                 </a>
             </div>

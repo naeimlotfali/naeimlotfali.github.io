@@ -76,12 +76,16 @@ document.querySelectorAll('.competency-card, .skill-tag, .stat-card, .project-ca
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ---------- Solution+ web gallery (swappable pages) ----------
-const solutionWebImages = Array.from({ length: 8 }, (_, i) => `assets/images/solution_web_${i + 1}.jpg`);
-
+// ---------- Image galleries (swappable pages) ----------
+// Each gallery declares its own images and captions on the element:
+//   data-images    pipe-separated image paths
+//   data-captions  pipe-separated captions, one per image
+//   data-alt       prefix used to build each image's alt text
 function initGallery(gallery) {
     if (!gallery) return null;
+    const images = (gallery.dataset.images || '').split('|').filter(Boolean);
     const captions = (gallery.dataset.captions || '').split('|');
+    const altPrefix = gallery.dataset.alt || '';
     const imgEl = gallery.querySelector('.gallery-img');
     const capEl = gallery.querySelector('.gallery-caption');
     const curEl = gallery.querySelector('.gallery-counter .cur');
@@ -89,8 +93,8 @@ function initGallery(gallery) {
     let index = 0;
 
     function render() {
-        imgEl.src = solutionWebImages[index];
-        imgEl.alt = `Solution+ web — ${captions[index] || ''}`;
+        imgEl.src = images[index];
+        imgEl.alt = `${altPrefix}${captions[index] || ''}`;
         // restart the fade animation
         imgEl.style.animation = 'none';
         void imgEl.offsetWidth;
@@ -103,7 +107,7 @@ function initGallery(gallery) {
     }
 
     function go(delta) {
-        index = (index + delta + solutionWebImages.length) % solutionWebImages.length;
+        index = (index + delta + images.length) % images.length;
         render();
     }
     function goTo(i) { index = i; render(); }
@@ -122,12 +126,12 @@ function initGallery(gallery) {
 
     // open current image in the lightbox as a browsable gallery
     imgEl.addEventListener('click', () => {
-        const items = solutionWebImages.map((src, i) => ({ src, caption: captions[i] || '' }));
+        const items = images.map((src, i) => ({ src, caption: captions[i] || '' }));
         openLightbox(items, index);
     });
 
     render();
-    return { go };
+    return { el: gallery, go };
 }
 
 // ---------- Lightbox (single image or browsable gallery) ----------
@@ -200,15 +204,17 @@ document.addEventListener('keydown', (e) => {
     else if (e.key === 'ArrowRight') lbGo(1);
 });
 
-const solutionGallery = initGallery(document.getElementById('solutionWebGallery'));
+const galleries = [...document.querySelectorAll('.gallery')].map(initGallery).filter(Boolean);
 
-// arrow-key navigation for the inline gallery when the lightbox is closed
+// arrow-key navigation for whichever inline gallery is on screen, when the
+// lightbox is closed
 document.addEventListener('keydown', (e) => {
-    if (lightbox.classList.contains('open') || !solutionGallery) return;
-    const g = document.getElementById('solutionWebGallery');
-    const r = g.getBoundingClientRect();
-    const inView = r.top < window.innerHeight && r.bottom > 0;
-    if (!inView) return;
-    if (e.key === 'ArrowLeft') solutionGallery.go(-1);
-    else if (e.key === 'ArrowRight') solutionGallery.go(1);
+    if (lightbox.classList.contains('open')) return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const visible = galleries.find(g => {
+        const r = g.el.getBoundingClientRect();
+        return r.top < window.innerHeight && r.bottom > 0;
+    });
+    if (!visible) return;
+    visible.go(e.key === 'ArrowLeft' ? -1 : 1);
 });

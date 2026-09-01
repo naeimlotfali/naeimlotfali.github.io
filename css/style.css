@@ -651,6 +651,58 @@ nav.scrolled {
     margin-bottom: 20px;
 }
 
+.featured-content h3 .project-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    vertical-align: -8px;
+    margin-right: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.featured-content code {
+    font-family: 'Space Grotesk', ui-monospace, monospace;
+    font-size: 0.88em;
+    color: var(--accent-light);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 1px 6px;
+}
+
+/* Detailed bullet list inside a featured project */
+.feature-list {
+    list-style: none;
+    margin: -4px 0 20px;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+.feature-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.66em;
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--accent-light);
+    transform: rotate(45deg);
+}
+
+.feature-list strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
 .project-links {
     display: flex;
     gap: 12px;
@@ -1240,6 +1292,17 @@ footer p {
     overflow: hidden;
 }
 
+/* Landscape game captures: dark backdrop, whole frame visible */
+.gallery.dark {
+    background: #0b1026;
+    aspect-ratio: 16 / 7.8;
+}
+
+.gallery.dark .gallery-img {
+    object-fit: contain;
+    object-position: center;
+}
+
 .gallery-img {
     width: 100%;
     height: 100%;
@@ -1343,6 +1406,8 @@ footer p {
 
 @media (max-width: 768px) {
     .gallery { aspect-ratio: 16 / 11; }
+    /* extra letterbox room so the caption doesn't sit on the screenshot */
+    .gallery.dark { aspect-ratio: 16 / 10.5; }
     .gallery-nav { width: 38px; height: 38px; font-size: 1.3rem; }
     .gallery-nav.prev { left: 10px; }
     .gallery-nav.next { right: 10px; }

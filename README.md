@@ -13,7 +13,8 @@ naeim-portfolio/
 ├── js/main.js           # Nav, scroll effects, reveal animations
 └── assets/
     ├── images/          # Profile photo, project screenshots, logos, favicon
-    └── docs/            # Resume PDF (linked from the Download Resume buttons)
+    └── docs/            # resume.html — source for the resume PDF
+                         # Naeim-Lotfali-Resume.pdf — linked from the Download Resume buttons
 ```
 
 ## Run locally
@@ -34,6 +35,12 @@ Any static host works. The simplest options:
 
 ## Updating content
 
-- **Resume**: replace `assets/docs/Naeim-Lotfali-Resume.pdf` (keep the filename, or update the links in `index.html`).
-- **Projects**: each project is a `.featured-project` or `.project-card` block in `index.html`.
+- **Resume**: edit `assets/docs/resume.html`, then regenerate the PDF (keep the filename, or update the links in `index.html`):
+
+  ```bash
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=assets/docs/Naeim-Lotfali-Resume.pdf assets/docs/resume.html
+  ```
+
+- **Projects**: each project is a `.featured-project`, `.gallery-project`, or `.project-card` block in `index.html`.
+- **Galleries**: a `.gallery` element declares its own `data-images`, `data-captions`, and `data-alt`; `js/main.js` wires up every one it finds. Add `.dark` for landscape captures that should be letterboxed rather than cropped.
 - **Colors/theme**: edit the CSS variables in the `:root` block of `css/style.css`.
