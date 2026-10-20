@@ -98,7 +98,9 @@
                     </p>
                     <p>
                         Experienced in Clean Architecture, real-time systems, offline-first applications, and
-                        high-performance Flutter development for Android, iOS, Web, and PWA. I recently built and
+                        high-performance Flutter development for Android, iOS, Web, and PWA. Most recently I built
+                        <a href="https://owjfit.ir" target="_blank" rel="noopener" style="color: var(--accent-light);">Owj</a>,
+                        an offline-first gym tracker, end-to-end — the Flutter app and its FastAPI backend. I also built and
                         launched <a href="https://eventiran.com" target="_blank" rel="noopener" style="color: var(--accent-light);">Event Iran</a>,
                         an event discovery platform, and
                         <a href="https://cafebazaar.ir/app/ir.parto.game" target="_blank" rel="noopener" style="color: var(--accent-light);">Parto</a>,
@@ -204,6 +206,57 @@
                 <span class="section-label">Projects</span>
                 <h2 class="section-title">Featured Work</h2>
                 <div class="section-divider"></div>
+            </div>
+
+            <!-- Owj -->
+            <div class="gallery-project reveal">
+                <div class="gallery phones" id="owjGallery"
+                     data-alt="Owj — "
+                     data-images="assets/images/owj_1.jpg|assets/images/owj_2.jpg|assets/images/owj_3.jpg"
+                     data-captions="Home · live set logging · weekly plan|Exercise library · detail &amp; 1RM · history|Stats &amp; records · muscle-balance map">
+                    <img class="gallery-img" src="assets/images/owj_1.jpg" alt="Owj — home, workout logging and weekly plan">
+                    <button class="gallery-nav prev" aria-label="Previous screen">&#8249;</button>
+                    <button class="gallery-nav next" aria-label="Next screen">&#8250;</button>
+                    <div class="gallery-counter"><span class="cur">1</span>/<span class="total">3</span></div>
+                    <div class="gallery-caption">Home · live set logging · weekly plan</div>
+                </div>
+                <div class="gallery-dots" aria-label="Screens"></div>
+                <div class="featured-content">
+                    <span class="project-type">Personal Project · Full-Stack · Live · 2026</span>
+                    <h3><img class="project-icon" src="assets/images/owj_icon.png" alt="Owj app icon">Owj (اوج) — Gym Tracker &amp; Coaching Platform</h3>
+                    <p>
+                        A Persian-first (RTL, Jalali), offline-first gym and body-weight tracker that I built end-to-end
+                        on my own — the Flutter app for Android, iOS and the web as an installable PWA, and the backend
+                        behind it. It covers fast set logging with a rest timer, automatic weight progression, weekly
+                        plans, records and 1RM estimates, a muscle-balance map, a 5,600+ exercise library, backups, and
+                        imports from Strong, Hevy, FitNotes and Apple Health. A Dart rewrite of the open-source openGym,
+                        kept faithful to it by parity tests.
+                    </p>
+                    <p>
+                        Optional accounts and coach&ndash;student linking run on a <strong>FastAPI backend I designed and
+                        deployed</strong> — PostgreSQL, Redis, S3-compatible storage and Docker Compose — with SMS one-time-code
+                        sign-in, short-lived JWTs with rotating refresh tokens, and an OpenAPI contract that both the app
+                        and the server test against. Without an account, the app keeps working fully offline.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag sm">Flutter</span>
+                        <span class="skill-tag sm">GetX</span>
+                        <span class="skill-tag sm">Drift (SQLite)</span>
+                        <span class="skill-tag sm">Offline-first</span>
+                        <span class="skill-tag sm">PWA</span>
+                        <span class="skill-tag sm">RTL &amp; Jalali</span>
+                        <span class="skill-tag sm">Python · FastAPI</span>
+                        <span class="skill-tag sm">PostgreSQL</span>
+                        <span class="skill-tag sm">Redis</span>
+                        <span class="skill-tag sm">Docker</span>
+                        <span class="skill-tag sm">Contract-tested API</span>
+                        <span class="skill-tag sm">Firebase (FCM, Crashlytics)</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://owjfit.ir" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit owjfit.ir</a>
+                        <a href="https://app.owjfit.ir" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Open the web app</a>
+                    </div>
+                </div>
             </div>
 
             <!-- Event Iran -->
@@ -666,6 +719,20 @@
                         <span class="skill-tag">Cubit</span>
                         <span class="skill-tag">Provider</span>
                         <span class="skill-tag">Riverpod</span>
+                        <span class="skill-tag">GetX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="icon">🗄️</span> Backend &amp; Data</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Docker Compose</span>
+                        <span class="skill-tag">OpenAPI Contracts</span>
+                        <span class="skill-tag">JWT &amp; OTP Auth</span>
+                        <span class="skill-tag">Drift / SQLite</span>
                     </div>
                 </div>
                 <div class="skill-category">

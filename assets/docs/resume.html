@@ -130,7 +130,8 @@
 <p>
     Mobile Application Developer with 6+ years of experience designing and building cross-platform apps with Flutter
     and Kotlin. I lead end-to-end development of scalable, high-performance products with clean architecture and
-    real-time features, and I ship independently: a live event platform on web and Android, a published game, and
+    real-time features, and I ship independently: a full-stack fitness app with its own FastAPI backend, a live event
+    platform on web and Android, a published game, and
     three open-source packages on pub.dev — including one that puts a single type-safe API across seven Iranian
     payment gateways, and two Flutter plugins that ship verified Go Mobile native binaries for Android and iOS.
 </p>
@@ -139,7 +140,7 @@
 <div class="grid3">
     <div>Cross-Platform Mobile Development (Flutter)</div>
     <div>Clean Architecture &amp; Scalable Code Design</div>
-    <div>Debugging and Issue Resolution</div>
+    <div>Backend &amp; API Development (FastAPI, PostgreSQL)</div>
     <div>Android, iOS, Web &amp; PWA Deployment</div>
     <div>Flutter Plugin &amp; Native Integration (Kotlin / Swift / Go)</div>
     <div>Cross-functional Team Collaboration</div>
@@ -163,6 +164,19 @@
         <div class="meta">2026 – Present</div>
     </div>
     <ul>
+        <li>
+            Built and launched <a href="https://owjfit.ir">Owj</a> end-to-end — a Persian-first (RTL, Jalali),
+            offline-first gym and body-weight tracker for Android, iOS and the web as an installable PWA. Flutter with
+            GetX and Drift (SQLite): fast set logging, automatic weight progression, weekly plans, 1RM and records, a
+            muscle-balance map, a 5,600+ exercise library, backups, and imports from Strong, Hevy, FitNotes and Apple
+            Health. A Dart rewrite of the open-source openGym, kept faithful to it by parity tests.
+        </li>
+        <li>
+            Designed, built and deployed Owj&rsquo;s backend on my own — Python, FastAPI, PostgreSQL, Redis,
+            S3-compatible storage and Docker Compose — for optional accounts and coach–student linking: SMS
+            one-time-code sign-in, short-lived JWTs with rotating refresh tokens and reuse detection, and an OpenAPI
+            contract that both the app and the server test against, so the two cannot drift apart.
+        </li>
         <li>
             Designed, built, and launched <a href="https://eventiran.com">eventiran.com</a> — a platform for
             discovering and registering for online and in-person events across Iran — live on Web and published on
@@ -286,14 +300,14 @@
 
 <h2>Technical Skills</h2>
 <div class="grid3">
-    <div><span class="k">Languages &amp; Frameworks</span>Dart, Flutter, Flame, Kotlin, Java, Swift, Go</div>
+    <div><span class="k">Languages &amp; Frameworks</span>Dart, Flutter, Flame, Kotlin, Java, Swift, Go, Python (FastAPI)</div>
     <div><span class="k">Architecture &amp; Patterns</span>Clean Architecture, MVVM, BLoC, Cubit, Provider, Riverpod, MVC</div>
-    <div><span class="k">State Management</span>BLoC, Cubit, Provider, Riverpod</div>
+    <div><span class="k">State Management</span>BLoC, Cubit, Provider, Riverpod, GetX</div>
     <div><span class="k">UI/UX</span>Material Design, Custom Widgets, Responsive Design, Custom Painting, Figma Integration</div>
-    <div><span class="k">Tools &amp; Platforms</span>Git, GitHub/GitLab, GitHub Actions, Android Studio, VS Code, Postman, Firebase Console</div>
+    <div><span class="k">Tools &amp; Platforms</span>Git, GitHub/GitLab, GitHub Actions, Android Studio, VS Code, Postman, Firebase Console, Docker</div>
     <div><span class="k">Testing &amp; Debugging</span>Unit Testing, Integration Testing, Golden/Headless Simulation Tests, DevTools, Logging</div>
     <div><span class="k">Deployment</span>Android (APK, AAB), PWA, iOS TestFlight, Web Builds, Play Store, App Store, Cafe Bazaar, pub.dev</div>
-    <div><span class="k">APIs &amp; Integration</span>RESTful APIs, WebSockets, Firebase, Supabase, Payment Gateways, In-App Purchases, Ad Mediation, Google Maps API, Push Notifications</div>
+    <div><span class="k">APIs &amp; Integration</span>RESTful APIs, WebSockets, PostgreSQL, Redis, Drift/SQLite, Firebase, Supabase, Payment Gateways, In-App Purchases, Ad Mediation, Google Maps API, Push Notifications</div>
     <div><span class="k">Other</span>Flutter Plugin Development, Platform Channels, Go Mobile Bindings, CI/CD &amp; Binary Provenance, Agile/Scrum, Localization &amp; RTL, Performance Optimization</div>
 </div>
 

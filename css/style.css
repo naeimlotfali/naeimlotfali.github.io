@@ -1269,6 +1269,17 @@ footer p {
     object-position: center;
 }
 
+/* Composed phone-screen slides (16:10): show the whole slide, matching backdrop */
+.gallery.phones {
+    background: #05080f;
+    aspect-ratio: 16 / 10;
+}
+
+.gallery.phones .gallery-img {
+    object-fit: contain;
+    object-position: center;
+}
+
 .gallery-img {
     width: 100%;
     height: 100%;
