@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naeimlotfali.github.io/sitemap.xml
